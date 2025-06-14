@@ -1,0 +1,71 @@
+<html>
+<body>
+<div id="mypage1">
+<br><br>
+</div>
+
+<div id="mypage" style="font-size:30px; margin-left:200px; color:red">
+  <input style="margin-left:300px; margin-top:200px; font-size:30px" type="text" name="tb1" id="tb1">
+  <br>
+  <input style="margin-left:300px; margin-top:50px; font-size:30px" type="button" name="submit"
+  id="submit" value="submit" onclick="fnct1()">
+  <p style="font-size:30px; color:red; margin-left:200px"> </p>
+  <br><br>
+</div>
+</body>
+
+<script>
+var MyAnswer = document.getElementById("mypage");
+
+function vowel() {
+  var str;
+  str = document.getElementById("tb1").value;
+  str = str.toUpperCase();
+
+  for (var i = 0; i < str.length; i++) {
+    var chr = str.charAt(i); // Fixed: used str.charAt(i) instead of charAt(i)
+    if (chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+      break;
+  }
+
+  if (i < str.length)
+    alert("The position of the left most vowel is " + (i + 1));
+  else {
+    alert("The vowel does not exist");
+  }
+}
+
+function reverse() {
+  var aa = document.getElementById("tb1").value;
+  alert(aa);
+  alert("contents is a number");
+
+  var str;
+  str = document.getElementById("tb1").value; // Fixed typo: documentgetElementById -> document.getElementById
+
+  var num, rev = 0, remainder;
+  num = parseInt(str);
+
+  mypage.innerHTML = mypage.innerHTML + "The Number before " + num + "   ";
+  while (num != 0) {
+    remainder = num % 10;
+    num = parseInt(num / 10);
+    rev = rev * 10 + remainder;
+  }
+
+  alert("Reverse of " + str + " is " + rev); // Fixed string concatenation syntax
+  mypage.innerHTML = mypage.innerHTML + "The Number after " + rev;
+}
+
+function fnct1() {
+  var aa = document.getElementById("tb1").value;
+  if (isNaN(aa)) {
+    alert(aa);
+    alert("contents is not a number");
+    vowel();
+  } else {
+    reverse();
+  }
+}
+</script>
+</html>

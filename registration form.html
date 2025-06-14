@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <style>
+        .st1 {
+            font-size: 30px;
+            font-family: Verdana, sans-serif;
+            background-color: slateblue;
+            color: yellow;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .st2 {
+            width: 700px;
+            height: auto;
+            background-color: orange;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .st3 {
+            display: block;
+            width: 90%;
+            font-size: 25px;
+            margin: 15px auto;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            font-size: 30px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: red;
+            color: white;
+            font-size: 35px;
+        }
+
+        select, input[type="date"] {
+            width: 90%;
+            font-size: 25px;
+            margin: 15px auto;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body style="background-color:white">
+
+    <p class="st1">Department of Computer Science and Business Systems</p>
+
+    <div class="st2">
+        <p class="st1">REGISTRATION</p>
+
+        <input class="st3" type="text" placeholder="Name">
+        <input class="st3" type="text" placeholder="Email">
+        <input class="st3" type="text" placeholder="Phone no.">
+        <textarea rows="3" class="st3" placeholder="Address"></textarea>
+
+        <select>
+            <option value="CET">CET</option>
+            <option value="COMEDK">COMEDK</option>
+            <option value="MGMT">MGMT</option>
+            <option value="GOI">GOI</option>
+        </select>
+
+        <input type="date" class="st3">
+
+        <button type="submit" class="btn">Register</button>
+    </div>
+
+</body>
+</html>
